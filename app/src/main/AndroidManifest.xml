@@ -16,5 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.bogerweather.app.activity.WeatherActivity"></activity>
     </application>
 </manifest>

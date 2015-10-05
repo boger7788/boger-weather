@@ -35,7 +35,7 @@ public class BogerWeatherOpenHelper extends SQLiteOpenHelper {
             + "id integer primary key autoincrement, "
             + "county_name text, "
             + "county_code text, "
-            + "province_id integer)";
+            + "city_id integer)";
 
     public BogerWeatherOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
