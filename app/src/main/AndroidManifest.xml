@@ -17,5 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.bogerweather.app.activity.WeatherActivity"></activity>
+
+        <service android:name="com.bogerweather.app.service.AutoUpdateService"></service>
+        <receiver android:name="com.bogerweather.app.receiver.AutoUpdateReceiver"></receiver>
     </application>
 </manifest>

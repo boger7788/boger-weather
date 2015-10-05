@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.bogerweather.app.R;
 import com.bogerweather.app.model.City;
+import com.bogerweather.app.service.AutoUpdateService;
 import com.bogerweather.app.util.HttpCallbackListener;
 import com.bogerweather.app.util.HttpUtil;
 import com.bogerweather.app.util.Utility;
@@ -181,6 +182,8 @@ public class WeatherActivity extends Activity implements View.OnClickListener {
         currentDateText.setText(prefs.getString("current_date", ""));
         weatherInfoLayout.setVisibility(View.VISIBLE);
         cityNameText.setVisibility(View.VISIBLE);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
 
 
     }
