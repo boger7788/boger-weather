@@ -28,7 +28,6 @@ public class Utility {
     * */
     public synchronized static boolean handleProvincesResponse
     (BogerWeatherDB bogerWeatherDB, String response) {
-
         if (!TextUtils.isEmpty(response)) {
             String[] allProvinces = response.split(",");
             if (allProvinces != null && allProvinces.length > 0) {

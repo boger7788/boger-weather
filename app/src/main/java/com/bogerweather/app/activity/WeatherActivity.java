@@ -63,7 +63,7 @@ public class WeatherActivity extends Activity {
         weatherDespTest = (TextView) findViewById(R.id.weather_desp);
         temp1Text = (TextView) findViewById(R.id.temp1);
         temp2Text = (TextView) findViewById(R.id.temp2);
-        currentDateText = (TextView) findViewById(R.id.current_data);
+        currentDateText = (TextView) findViewById(R.id.current_date);
         String countyCode = getIntent().getStringExtra("county_code");
         if (!TextUtils.isEmpty(countyCode)) {
             publishText.setText("同步中");
@@ -87,7 +87,7 @@ public class WeatherActivity extends Activity {
     *查询天气代号所对应的天气
     * */
     private void queryWeatherInfo(String weatherCode) {
-        String address = "http://www.weather.com.cn/data/cityinfo" + weatherCode + ".html";
+        String address = "http://www.weather.com.cn/data/cityinfo/" + weatherCode + ".html";
         queryFromServer(address, "weatherCode");
     }
 
@@ -140,7 +140,7 @@ public class WeatherActivity extends Activity {
         temp2Text.setText(prefs.getString("temp2",""));
         weatherDespTest.setText(prefs.getString("weather_desp",""));
         publishText.setText("今天"+prefs.getString("publish_time","")+"发布");
-        currentDateText.setText(prefs.getString("current_data",""));
+        currentDateText.setText(prefs.getString("current_date",""));
         weatherInfoLayout.setVisibility(View.VISIBLE);
         cityNameText.setVisibility(View.VISIBLE);
 
